@@ -1,0 +1,76 @@
+.header{
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.header-topbar {
+  height: 30px;
+  background-color: #333333;
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 70px;
+  gap: 15px;
+}
+
+.header-topbar p {
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.header-card{
+  background-color: #ffffff;
+  padding: 10px;
+  width: 100%;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  height: 60px;
+  width: 65px;
+  margin: 15px 10px 15px 60px
+}
+
+.text-content .title{
+  font-size: 15px;
+  color: #087021;
+  margin: 0;
+}
+
+.text-content .subtitle{
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;;
+  color: #000000;
+}
+
+.user-card {
+  text-align: center;
+  padding: 24px;
+  width: 300px;
+  margin: auto;
+}
+
+.user-icon mat-icon {
+  color: #A8D5BA; /* tono verde suave similar al de la imagen */
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 12px;
+  color: #333;
+}
+
+.user-title {
+  color: #666;
+  font-size: 16px;
+  margin-top: 4px;
+  line-height: 1.4;
+}

@@ -4,6 +4,8 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -15,19 +17,24 @@ $GECI-theme: mat.define-theme((
     theme-type: light,
     primary: mat.$azure-palette,
     tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
-  )
-));
+    ),
+    density: (
+      scale: 0,
+      )
+      ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-:root {
-  @include mat.all-component-themes($GECI-theme);
-}
+      // Include theme styles for core and each component used in your app.
+      // Alternatively, you can import and @include the theme mixins for each component
+      // that you are using.
+      :root {
+        @include mat.all-component-themes($GECI-theme);
+      }
 
+      :root {
+        @include mat.progress-spinner-overrides((
+          active-indicator-color: #087021,
+        ));
+      }
 // Comment out the line below if you want to use the pre-defined typography utility classes.
 // For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
 // @include mat.typography-hierarchy($GECI-theme);

@@ -2,13 +2,16 @@ import { Component } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { routes } from '../../app.routes';
+import { Router } from 'express';
 
 
 @Component({
   selector: 'app-detail-page',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatTableModule, NgClass],
+  imports: [MatButtonModule, MatIconModule, MatTableModule,MatProgressSpinnerModule, NgClass, NgIf],
   templateUrl: './detail-page.component.html',
   styleUrl: './detail-page.component.css'
 })
@@ -40,4 +43,5 @@ export default class DetailPageComponent {
       error: '',
     },
   ];
+
 }

@@ -7,6 +7,10 @@
 
   <h1 class="title">Detalle de la Solicitud ID:</h1>
 
+  @if (dataSource.length == 0) {
+    <mat-spinner></mat-spinner>
+  }@else {
+
   <div class="table">
 
     <mat-table [dataSource]="dataSource" class="full-width-table ">
@@ -41,20 +45,26 @@
       <!-- Acciones -->
       <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef class="actions-column"> Acciones </mat-header-cell>
-        <mat-cell *matCellDef="let element" class="actions-column">
-          <mat-icon>content_copy</mat-icon>
-          <mat-icon>visibility</mat-icon>
+        <mat-cell *matCellDef="let element" class="actions-column" [ngClass]="{ 'disabled-actions': element.error }">
+          <a *ngIf="!element.error" href="#" title="Copiar CSV"><mat-icon>content_copy</mat-icon></a>
+          <a *ngIf="!element.error" href="#" title="Ver HSV"><mat-icon>visibility</mat-icon></a>
+
+          <!-- Iconos deshabilitados (opcional) -->
+          <mat-icon *ngIf="element.error" class="disabled-icon">content_copy</mat-icon>
+          <mat-icon *ngIf="element.error" class="disabled-icon">visibility</mat-icon>
         </mat-cell>
       </ng-container>
+
 
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 
-    <div class="volver-btn">
-      <button mat-raised-button color="primary" class="volver">VOLVER</button>
+    <div class="volver-btn" >
+      <button mat-raised-button color="primary" class="volver" >VOLVER</button>
     </div>
 
   </div>
+}
 </div>
