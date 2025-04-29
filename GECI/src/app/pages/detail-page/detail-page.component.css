@@ -1,0 +1,90 @@
+.body{
+  margin-left: 60px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+
+.breadcrumb{
+
+  margin-top: 10px;
+}
+
+.breadcrumb a{
+  color:#087021;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.title{
+
+  margin-top: 20px;
+}
+
+.table{
+  align-items: center;
+  margin-top: 20px;
+}
+.full-width-table {
+  width: 100%;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
+
+
+/* ERROR column más estrecha */
+.error-column {
+  max-width: 600px;
+  min-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+mat-header-cell.actions-column,
+mat-cell.actions-column {
+  text-align: right;
+  justify-content: flex-end;
+  display: flex;
+}
+
+mat-header-row {
+  background-color: #C4DDCA;
+}
+
+.error-text {
+  color: #D4403A;
+}
+
+
+.mat-column-id,
+.mat-column-document,
+.mat-column-csv {
+  flex: 2;
+}
+
+mat-icon{
+  color: #008CFF;
+}
+
+.volver-btn {
+  margin-top: 20px;
+  text-align: right;
+}
+
+button.volver {
+  border-radius: 5px;
+  background-color: #087021;
+  color: white;
+}
+
+
+mat-row:nth-child(even) {
+  background-color: #EEEEEE;
+}
+
+mat-row:nth-child(odd) {
+  background-color: #ffffff;
+}

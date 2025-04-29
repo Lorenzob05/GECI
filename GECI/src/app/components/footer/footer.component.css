@@ -1,0 +1,60 @@
+.footer-topbar {
+  height: 40px;
+  background-color: #333333;
+  font-size: 12px;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 251px;
+}
+
+.footer-bottom {
+  background-color: #E4E4E4;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  position: relative; /*para posiscionar las imagenes*/
+  padding: 0 20px;
+}
+
+.links-right {
+  margin-left: auto; /* echa el div a la derecha */
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  height: 100%; /*todo el alto del div */
+  gap: 29.5px; /* distancia entre enlace y enlace*/
+  font-size: 15px; 
+  color: #333333;
+  padding-right: 75px;
+}
+.links-right a{
+  cursor: pointer;
+}
+.images-left {/*para ajustar el sitio de cada imagen*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* margenes especificos para cada imagen */
+#img-footer-1 {
+  position: absolute;
+  left: 60px;
+  top: 33px;
+}
+
+#img-footer-2 {
+  position: absolute;
+  left: 174px;
+  top: 38px;
+}
+
+#img-footer-3 {
+  position: absolute;
+  left: 268px;
+  top: 28px;
+}
