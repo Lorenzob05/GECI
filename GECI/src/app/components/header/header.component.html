@@ -5,19 +5,36 @@
   </div>
 
   <div class="header-content">
-    <img src="assets/images/logo.png" alt="Logo Junta Andalucia" class="logo">
-    <div class="text-content">
-      <p class="title">GECI Web</p>
-      <p class="subtitle">Junta de Andalucía</p>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Logo Junta Andalucia" class="image">
+      <div class="text-content">
+        <p class="title">GECI Web</p>
+        <p class="subtitle">Junta de Andalucía</p>
+      </div>
     </div>
+    <div class="services">
+      <div class="solicitudes">
+        <div class="search-icon">
+          <mat-icon>search</mat-icon>
+        </div>
+        <div class="search-title">Gestión de <br> solicitudes</div>
+      </div>
+      <mat-divider [vertical]="true" style="border-color: #C4DDCA; margin: 15px 10px"></mat-divider>
+      <div class="profile" (click)="toggleMenu()">
+        <div class="user-icon">
+          <span class="material-icons">person</span>
+        </div>
+        <div class="user-name">ANTONIO GARCÍA GARCÍA</div>
+        <div class="user-title">Consejería de Empleo, Formación <br> y Trabajo Autónomo</div>
 
+        <!-- Menú desplegable -->
+        <div class="dropdown-menu" *ngIf="menuVisible">
+          <div class="menu-item" (click)="onOrganismos()">Organismos</div>
+          <div class="menu-item" (click)="onDatosUsuario()">Datos de usuario</div>
+          <div class="menu-item" (click)="onSalir()">Salir</div>
+        </div>
+      </div>
 
+    </div>
   </div>
 </div>
-<mat-card class="user-card">
-      <div class="user-icon">
-        <mat-icon>person</mat-icon>
-      </div>
-      <div class="user-name">ANTONIO GARCÍA GARCÍA</div>
-      <div class="user-title">Consejería de Empleo, Formación <br> y Trabajo Autónomo</div>
-    </mat-card>
