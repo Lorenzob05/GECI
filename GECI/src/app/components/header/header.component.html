@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="services">
-      <div class="solicitudes">
+      <div class="solicitudes" (click)="onSolicitudes()">
         <div class="search-icon">
           <mat-icon>search</mat-icon>
         </div>
@@ -22,7 +22,7 @@
       <mat-divider [vertical]="true" style="border-color: #C4DDCA; margin: 15px 10px"></mat-divider>
       <div class="profile" (click)="toggleMenu()">
         <div class="user-icon">
-          <span class="material-icons">person</span>
+          <mat-icon>person</mat-icon>
         </div>
         <div class="user-name">ANTONIO GARCÍA GARCÍA</div>
         <div class="user-title">Consejería de Empleo, Formación <br> y Trabajo Autónomo</div>

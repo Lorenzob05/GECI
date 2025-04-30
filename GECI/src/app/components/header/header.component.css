@@ -29,6 +29,7 @@
 .logo{
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .image{
@@ -67,6 +68,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .solicitudes::after {
@@ -102,7 +104,6 @@
   position: relative;
 }
 
-/* Menú desplegable */
 .dropdown-menu {
   position: absolute;
   top: 100%;

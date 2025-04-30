@@ -20,12 +20,16 @@ export class HeaderComponent {
     this.menuVisible = !this.menuVisible;
   }
 
-  @HostListener('document:click', ['$event'])
-  handleClickOutside(event: MouseEvent): void {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.profile')) {
-      this.menuVisible = false;
-    }
+  // @HostListener('document:click', ['$event'])
+  // handleClickOutside(event: MouseEvent): void {
+  //   const target = event.target as HTMLElement;
+  //   if (!target.closest('.profile')) {
+  //     this.menuVisible = false;
+  //   }
+  // }
+
+  onSolicitudes(): void {
+    console.log('Solicitudes clicked');
   }
 
   onOrganismos(): void {
