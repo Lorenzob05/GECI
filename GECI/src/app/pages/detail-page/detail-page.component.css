@@ -32,7 +32,7 @@ mat-header-cell {
 }
 
 
-/* ERROR column más estrecha */
+
 .error-column {
   max-width: 600px;
   min-width: 400px;
