@@ -35,6 +35,12 @@ $GECI-theme: mat.define-theme((
           active-indicator-color: #087021,
         ));
       }
+
+      :root {
+        @include mat.dialog-overrides((
+          container-shape:0px
+        ));
+      }
 // Comment out the line below if you want to use the pre-defined typography utility classes.
 // For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
 // @include mat.typography-hierarchy($GECI-theme);

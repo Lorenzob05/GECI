@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 mat-dialog-title>Añadir Nueva Solicitud</h1>
+  <mat-dialog-content class="modal-body">
+
+    <div class="top-section">
+      <p>ID Petición</p>
+      <form class="form">
+        <div class="input-group">
+          <input value="INSS_CPH0000000000000037897" />
+          <button mat-fab extended class="add">
+            <mat-icon>add</mat-icon>Añadir
+          </button>
+        </div>
+      </form>
+      <div class="divider">
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <div class="table-scroll">
+        <mat-table [dataSource]="dataSource" class="full-width-table">
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> ID Petición </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+
+    </div>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button class="cancelar">CANCELAR</button>
+    <button mat-raised-button class="volver">VOLVER</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,139 @@
+.body{
+  justify-content: space-evenly;
+}
+
+div h1 {
+  margin: 40px 0px, 10px, 60px;
+}
+
+
+mat-dialog-content p {
+  font-weight: bold;
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 40px;
+  width: 250px;
+  font-size: 15px;
+}
+
+.add {
+  margin-left: 30px;
+}
+
+div button {
+  width: 140px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 13;
+  border-radius: 5px;
+  border-color: #087021;
+  background-color: #087021;
+  color: white;
+  border: 0px;
+  box-shadow: none;
+}
+
+button mat-icon {
+  font-weight: bold;
+}
+
+div button:hover {
+  background-color: #0B4C1A;
+  transition: all 0.1s ease-in-out;
+}
+
+mat-divider {
+  border-color: #C4DDCA;
+}
+
+
+.table {
+  min-width: 250px;
+  max-width: 430px;
+  align-items: center;
+  margin-top: 10px;
+  scroll-behavior: auto;
+}
+
+
+mat-header-cell {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+mat-header-row {
+  background-color: #C4DDCA;
+}
+
+
+mat-row:nth-child(even) {
+  background-color: #EEEEEE;
+}
+
+mat-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.table-scroll {
+  max-height: 250px;
+  max-width: 430px;
+  overflow-y: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+
+mat-dialog-actions button {
+  margin-right: 40px;
+  width: 120px;
+  height: 40px;
+  box-shadow: none;
+
+}
+
+
+mat-dialog-actions button.volver {
+  font-weight: bold;
+  font-size: 13;
+  border-radius: 5px;
+  border-color: #087021;
+  background-color: #087021;
+  color: white;
+  border: 0px;
+}
+
+mat-dialog-actions button.volver:hover {
+  background-color: #0B4C1A;
+  transition: all 0.1s ease-in-out;
+}
+
+mat-dialog-actions button.cancelar {
+  font-weight: bold;
+  font-size: 13;
+  border-radius: 5px;
+  border-color: #087021;
+  background-color: #FFFFFF;
+  color: #087021;
+  border: #087021 1px solid;
+}
+
+mat-dialog-actions button.cancelar:hover {
+  background-color: #087021;
+  color: #FFFFFF;
+  transition: all 0.1s ease-in-out;
+}
+
+::ng-deep mat-dialog-actions {
+  padding: 0 !important;
+}
