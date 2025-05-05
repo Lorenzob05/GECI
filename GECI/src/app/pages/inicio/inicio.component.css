@@ -62,8 +62,8 @@ a:visited{
 button {
     background-color: #087021;
     color: #EEEEEE;
-    padding: 10px 25px; /* 5px vertical, 15px horizontal */
-    border-radius: 4px; /* Bordes redondeados */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */  
+    padding: 10px 25px; 
+    border-radius: 4px; 
+    border: none;
+    cursor: pointer;
 }
