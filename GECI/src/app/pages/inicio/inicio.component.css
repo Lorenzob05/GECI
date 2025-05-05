@@ -10,7 +10,7 @@
     font-weight: lighter;
     max-width: 1300px;
     width: 94%;
-    font-size: 0.9rem;
+    font-size: 15;
     color: #555;
 }
 
@@ -46,14 +46,14 @@
 .content-sections .access-methods {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 4em;
     
 }
 
 .content-sections .access-methods button {
     flex: 0 1 auto; /* No crece, puede encogerse, ancho automático */
     white-space: nowrap; /* Evita que el texto se divida en líneas */
-   
+    font-weight: bold;
 }
 
 a:visited{
