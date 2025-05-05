@@ -5,7 +5,7 @@
     <a href="#">Inicio > Gestión de solicitudes > Detalles</a>
   </div>
 
-  <h1 class="title">Detalle de la Solicitud ID:</h1>
+  <h1 class="title">Detalle de la Solicitud ID: 210</h1>
 
   @if (dataSource.length == 0) {
     <mat-spinner></mat-spinner>
@@ -41,8 +41,8 @@
       <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef class="actions-column"> Acciones </mat-header-cell>
         <mat-cell *matCellDef="let element" class="actions-column" [ngClass]="{ 'disabled-actions': element.error }">
-          <a *ngIf="!element.error" href="#" title="Copiar CSV"><mat-icon>content_copy</mat-icon></a>
-          <a *ngIf="!element.error" href="#" title="Ver HSV"><mat-icon>visibility</mat-icon></a>
+          <a *ngIf="!element.error" href="" title="Copiar CSV"><mat-icon>content_copy</mat-icon></a>
+          <a *ngIf="!element.error" href="" title="Ver HSV"><mat-icon>visibility</mat-icon></a>
 
           <mat-icon *ngIf="element.error" class="disabled-icon">content_copy</mat-icon>
           <mat-icon *ngIf="element.error" class="disabled-icon">visibility</mat-icon>

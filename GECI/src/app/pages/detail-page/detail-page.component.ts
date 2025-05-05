@@ -4,8 +4,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NgClass, NgIf } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { routes } from '../../app.routes';
-import { Router } from 'express';
 
 
 @Component({
