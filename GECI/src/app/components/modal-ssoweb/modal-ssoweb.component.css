@@ -1,0 +1,50 @@
+h4{
+  color: #000;
+}
+
+.top-section{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+input {
+  height: 40px;
+  width: 250px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+
+mat-divider {
+  border-color: #C4DDCA;
+}
+
+mat-dialog-actions button {
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  box-shadow: none;
+
+}
+
+
+mat-dialog-actions button.login {
+  font-weight: bold;
+  font-size: 13;
+  border-radius: 5px;
+  border-color: #087021;
+  background-color: #087021;
+  color: white;
+  border: 0px;
+}
+
+mat-dialog-actions button.login:hover {
+  background-color: #0B4C1A;
+  transition: all 0.1s ease-in-out;
+}

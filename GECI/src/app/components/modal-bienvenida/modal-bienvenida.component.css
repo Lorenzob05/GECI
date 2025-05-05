@@ -1,0 +1,46 @@
+h4{
+  color: #000;
+}
+
+mat-divider {
+  border-color: #C4DDCA;
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.actions .checkbox{
+  display: flex;
+  gap: 10px;
+}
+.actions button {
+  margin-right: 24px;
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  box-shadow: none;
+}
+
+.actions button.cerrar {
+  font-weight: bold;
+  font-size: 13;
+  border-radius: 5px;
+  border-color: #087021;
+  background-color: #087021;
+  color: white;
+  border: 0px;
+}
+
+.actions button.cerrar:hover {
+  background-color: #0B4C1A;
+  transition: all 0.1s ease-in-out;
+}
+
+::ng-deep .actions {
+  padding: 0 !important;
+}
+
