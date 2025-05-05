@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogActions,MatDialogContent,MatDialogTitle} from '@angular/material/dialog';
+import { MatDialogActions,MatDialogContent} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -11,11 +11,12 @@ import { MatTableModule } from '@angular/material/table';
 @Component({
   selector: 'app-modal-solicitud',
   standalone: true,
-  imports: [MatDialogActions,MatDialogContent,MatDialogTitle,MatButtonModule,MatFormFieldModule,MatInputModule,FormsModule, MatIconModule, MatDividerModule,MatTableModule],
+  imports: [MatDialogActions,MatDialogContent,MatButtonModule,MatFormFieldModule,MatInputModule,FormsModule, MatIconModule, MatDividerModule,MatTableModule],
   templateUrl: './modal-solicitud.component.html',
   styleUrl: './modal-solicitud.component.css'
 })
 export default class ModalSolicitudComponent {
+  nuevaSolicitud:string = '';
   displayedColumns: string[] = ['id'];
   dataSource = [
     {
@@ -26,23 +27,13 @@ export default class ModalSolicitudComponent {
     },{
       id: 'INSS_CPH000000000000037897'
     },
-    {
-      id: 'ECOTAVU_00000000000001155N'
-    },{
-      id: 'INSS_CPH000000000000037897'
-    },
-    {
-      id: 'ECOTAVU_00000000000001155N'
-    },{
-      id: 'INSS_CPH000000000000037897'
-    },
-    {
-      id: 'ECOTAVU_00000000000001155N'
-    },{
-      id: 'INSS_CPH000000000000037897'
-    },
-    {
-      id: 'ECOTAVU_00000000000001155N'
-    },
   ];
+
+  addSolicitud(): void {
+    if(this.nuevaSolicitud.trim()){
+      this.dataSource.push({id: this.nuevaSolicitud});
+      this.dataSource = [...this.dataSource];
+      this.nuevaSolicitud = '';
+    }
+  }
 }

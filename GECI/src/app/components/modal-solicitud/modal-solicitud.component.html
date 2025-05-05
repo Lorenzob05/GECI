@@ -1,13 +1,13 @@
 <div class="container">
-  <h1 mat-dialog-title>Añadir Nueva Solicitud</h1>
   <mat-dialog-content class="modal-body">
+    <h1>Añadir Nueva Solicitud</h1>
 
     <div class="top-section">
       <p>ID Petición</p>
       <form class="form">
         <div class="input-group">
-          <input />
-          <button mat-fab extended class="add">
+          <input [(ngModel)] = "nuevaSolicitud" name="nuevaSolicitud" type="text"/>
+          <button mat-fab extended class="add" (click)="addSolicitud()">
             <mat-icon>add</mat-icon>Añadir
           </button>
         </div>

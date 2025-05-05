@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import ModalSolicitudComponent from '../modal-solicitud/modal-solicitud.component';
+import ModalDatosPersonalesComponent from '../modal-datos-personales/modal-datos-personales.component';
 
 @Component({
   selector: 'app-header',
@@ -37,7 +38,8 @@ export class HeaderComponent {
     console.log('Solicitudes clicked');
     let dialogRef = this.dialog.open(ModalSolicitudComponent, {
       panelClass: 'custom-modal-wrapper',
-      height: '500px',
+      minHeight: '420px',
+      maxHeight: '520px',
     });
   }
 
@@ -49,6 +51,10 @@ export class HeaderComponent {
 
   onDatosUsuario(): void {
     console.log('Datos de usuario clicked');
+    let dialogRef = this.dialog.open(ModalDatosPersonalesComponent, {
+      panelClass: 'custom-modal-wrapper',
+      height: '520px',
+    });
     this.menuVisible = false;
   }
 

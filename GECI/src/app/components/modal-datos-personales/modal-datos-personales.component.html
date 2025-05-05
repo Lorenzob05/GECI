@@ -1,0 +1,78 @@
+<div class="container">
+  <mat-dialog-content class="modal-body">
+    <h4>Datos Personales</h4>
+
+    <div class="datos-personales">
+      <div class="column-1">
+        <p>NIF:</p>
+        <p>Nombre:</p>
+        <p>Apellidos:</p>
+        <p>Certificado electrónico:</p>
+        <p>Último acceso:</p>
+      </div>
+      <div class="column-2">
+        <p>99999999R</p>
+        <p>NOMBRE</p>
+        <p>APELLIDO APELLIDO</p>
+        <p></p>
+        <br>
+        <p>15/03/2022 - 09:46:13</p>
+      </div>
+    </div>
+
+  </mat-dialog-content>
+  <div class="divider">
+    <mat-divider></mat-divider>
+  </div>
+  <mat-dialog-content>
+    <h4>Datos Laborales</h4>
+
+    <div class="datos-laborales">
+      <div class="organismo">
+        <div class="organismo-title">Consegería u organismo</div>
+        <div class="organismo-body">Consejería de hacienda y Administración Pública</div>
+      </div>
+
+      <div style="color: #000;">La consulta de datos de una persona precisará de su consentimiento expreso, el cual deberá constar en la solicitud de iniciación del procedimiento, no pudiendo realizarse consulta alguna en caso de no contar con el consentimiento de forma fehaciente. Los impresos o formularios de solicitudes de iniciación de los procedimientos deberán adecuarse para recoger dicho consentimiento. Las consultas deberán realizarse para una finalidad concreta y previamente habilitada en la plataforma. La información obtenida sólo podrá utilizarse para dicha finalidad. Es responsabilidad de los órganos que realizan las consultas la custodia de los consentimientos y la puesta a disposición del organismo cedente de los datos si se le requiere. De acuerdo con el artículo 44.3.b de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, se califica de infracción grave la consulta de datos de carácter personal sin recabar el consentimiento de la persona afectada.</div>
+      <div class="consulta">
+        <div>Para cualquier consulta, ampliación o reducción de los servicios disponibles,
+          contacte con los administradores de su Consejería u Organismo:</div>
+        <div class="input-group"><p>Buscar</p> <input type="text"></div>
+      </div>
+    </div>
+
+  </mat-dialog-content>
+<mat-dialog-content>
+  @if (dataSource.length == 0) {
+    <mat-spinner></mat-spinner>
+  }@else {
+
+  <div class="table">
+
+    <mat-table [dataSource]="dataSource" class="full-width-table ">
+
+      <ng-container matColumnDef="administrador">
+        <mat-header-cell *matHeaderCellDef> Administrador</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.administrador}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="telefono">
+        <mat-header-cell *matHeaderCellDef> Teléfono </mat-header-cell>
+        <mat-cell  *matCellDef="let element"> {{element.telefono}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="correo">
+        <mat-header-cell *matHeaderCellDef> Correo </mat-header-cell>
+        <mat-cell class="correo" *matCellDef="let element"> {{element.correo}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+}
+</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button class="cerrar">CERRAR</button>
+  </mat-dialog-actions>
+</div>

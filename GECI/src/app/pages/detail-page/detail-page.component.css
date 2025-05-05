@@ -32,6 +32,13 @@ mat-header-cell {
 }
 
 
+mat-row:nth-child(even) {
+  background-color: #EEEEEE;
+}
+
+mat-row:nth-child(odd) {
+  background-color: #ffffff;
+}
 
 .error-column {
   max-width: 600px;
@@ -97,10 +104,3 @@ button.volver:hover {
 }
 
 
-mat-row:nth-child(even) {
-  background-color: #EEEEEE;
-}
-
-mat-row:nth-child(odd) {
-  background-color: #ffffff;
-}
