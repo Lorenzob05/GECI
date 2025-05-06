@@ -4,12 +4,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NgClass, NgIf } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { HeaderComponent } from "../../components/header/header.component";
+import { FooterComponent } from '../../components/footer/footer.component';
 
 
 @Component({
   selector: 'app-detail-page',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatTableModule,MatProgressSpinnerModule, NgClass, NgIf],
+  imports: [MatButtonModule, MatIconModule, MatTableModule, MatProgressSpinnerModule, NgClass, NgIf, FooterComponent, HeaderComponent],
   templateUrl: './detail-page.component.html',
   styleUrl: './detail-page.component.css'
 })
