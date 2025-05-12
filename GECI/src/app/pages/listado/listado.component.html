@@ -6,23 +6,23 @@
 
 <div class="page-container">
     <app-sidebar (filterChanged)="applyFilter($event)"></app-sidebar>
-    
+
     <div class="content">
-      
-      
+
+
       <mat-table [dataSource]="dataSource" >
         <!-- ID Column -->
         <ng-container matColumnDef="id">
           <mat-header-cell *matHeaderCellDef> ID de Solicitud </mat-header-cell>
           <mat-cell *matCellDef="let solicitud"> {{solicitud.id}} </mat-cell>
         </ng-container>
-  
+
         <!-- Fecha -->
         <ng-container matColumnDef="date">
           <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
           <mat-cell *matCellDef="let solicitud"> {{solicitud.date}} </mat-cell>
         </ng-container>
-  
+
         <!-- Estado -->
         <ng-container matColumnDef="status">
           <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>
@@ -32,25 +32,25 @@
             </span>
           </mat-cell>
         </ng-container>
-  
+
         <!-- Comentario -->
         <ng-container matColumnDef="comment">
             <mat-header-cell *matHeaderCellDef> Comentario </mat-header-cell>
             <mat-cell *matCellDef="let solicitud">
-                <input matInput 
-                [(ngModel)]="solicitud.comment" 
+                <input matInput
+                [(ngModel)]="solicitud.comment"
                 placeholder="Añadir comentario"
                 (submit)="saveComment(solicitud)">
             </mat-cell>
           </ng-container>
-  
+
         <!-- Acciones -->
         <ng-container matColumnDef="actions">
           <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
           <mat-cell *matCellDef="let solicitud">
-            <button mat-icon-button >
+            <a mat-icon-button href="/gestion-de-solicitudes/detalles" >
               <mat-icon>visibility</mat-icon>
-            </button>
+            </a>
             <button mat-icon-button >
               <mat-icon onclick="saveComment(solicitud)">edit</mat-icon>
             </button>
@@ -59,7 +59,7 @@
               </button>
           </mat-cell>
         </ng-container>
-  
+
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
       </mat-table>
