@@ -7,7 +7,7 @@ import path from 'node:path';
 export const routes: Routes = [
   {path: '',
     component: InicioComponent},
-  {path: 'gestión-de-solicitudes',component: ListadoComponent},
-  {path: 'gestión-de-solicitudes/detalles',loadComponent: () => import('./pages/detail-page/detail-page.component'),
+  {path: 'gestion-de-solicitudes',component: ListadoComponent},
+  {path: 'gestion-de-solicitudes/detalles',loadComponent: () => import('./pages/detail-page/detail-page.component'),
   },
 ];
