@@ -1,12 +1,12 @@
 <div class="sidebar">
     <div class="margin">
-      <button class="add"><i class="fa-solid fa-plus"></i> <strong>SOLICITUD</strong></button>
+      <button class="add" (click)="createSolicitud()"><i class="fa-solid fa-plus"></i> <strong>SOLICITUD</strong></button>
       <p>Solicitudes</p>
       <div class="buttons">
         <mat-nav-list>
-          <div 
-            *ngFor="let filter of filters" 
-            mat-list-item 
+          <div
+            *ngFor="let filter of filters"
+            mat-list-item
             [class.active]="activeFilter === filter.value"
             (click)="setFilter(filter.value)"
             class="filter-button">

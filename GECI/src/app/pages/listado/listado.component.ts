@@ -47,7 +47,7 @@ export class ListadoComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.currentFilter = filter;
-    
+
     if (filter === 'all') {
       this.dataSource.data = this.allSolicitudes;
     } else {
@@ -79,7 +79,7 @@ export class ListadoComponent implements OnInit {
     if (index !== -1) {
       this.allSolicitudes[index].comment = solicitud.comment;
     }
-    
+
     // Actualiza la tabla
     this.applyFilter(this.currentFilter);
   }
