@@ -37,12 +37,10 @@
         <ng-container matColumnDef="comment">
             <mat-header-cell *matHeaderCellDef> Comentario </mat-header-cell>
             <mat-cell *matCellDef="let solicitud">
-              <mat-form-field appearance="outline">
                 <input matInput 
-                       [(ngModel)]="solicitud.comment" 
-                       placeholder="Añadir comentario"
-                       (submit)="saveComment(solicitud)">
-              </mat-form-field>
+                [(ngModel)]="solicitud.comment" 
+                placeholder="Añadir comentario"
+                (submit)="saveComment(solicitud)">
             </mat-cell>
           </ng-container>
   
