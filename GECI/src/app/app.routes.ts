@@ -8,6 +8,6 @@ export const routes: Routes = [
   {path: '',
     component: InicioComponent},
   {path: 'gestión-de-solicitudes',component: ListadoComponent},
-  {path: 'detalles',loadComponent: () => import('./pages/detail-page/detail-page.component'),
+  {path: 'gestión-de-solicitudes/detalles',loadComponent: () => import('./pages/detail-page/detail-page.component'),
   },
 ];
