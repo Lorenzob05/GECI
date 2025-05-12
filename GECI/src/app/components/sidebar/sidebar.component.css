@@ -1,0 +1,78 @@
+.sidebar {
+    width: 310px;
+    padding: 16px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  /* botones de filtro */
+  .filter-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    background-color: #C4DDCA;
+    color: #087021;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    box-shadow: none;
+  }
+  
+  .filter-button:hover {
+    background-color: #087021;
+    color: #EEEEEE;
+  }
+  
+  .filter-button.active {
+    background-color: #087021;
+    color: #EEEEEE;
+  }
+  
+  .filter-name {
+    margin-left: 10px;
+  }
+  
+  .filter-count {
+    margin-right: 10px;
+  }
+  
+  /*"Solicitudes" */
+  p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    
+  }
+  
+  .margin {
+    margin-left: 60px;
+  }
+
+
+  /* Estilo para el botón de solicitud */
+  .add {
+    background-color: #FFFFFF;
+    color: #087021;
+    border: 1px solid #087021;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .add:hover {
+    background-color: #087021;
+    color: #EEEEEE;
+  }
+  
+  .fa-plus {
+    margin-right: 10px;
+    font-size: 1.5em;
+  }
