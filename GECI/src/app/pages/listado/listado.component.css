@@ -10,12 +10,76 @@
     font-weight: 500;
     text-decoration: none;
 }
-button {
-    background-color: #087021;
-    color: #EEEEEE;
-    padding: 10px 25px; 
-    border-radius: 4px; 
-    border: none;
-    cursor: pointer;
+h1{
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 60px;
+    font-size: 28;
 }
 
+
+.page-container {
+  display: flex;
+  min-height: 100vh;
+}
+ 
+app-sidebar {
+  flex-shrink: 0; /* evita que se reduzca */
+}
+ 
+.content {
+  flex: 1;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+/*  tabla */
+mat-table {
+    width: 879px; 
+    
+  }
+  
+  /*  header de la tabla */
+  mat-header-row {
+    background-color: #C4DDCA; 
+    height: 42px;
+  }
+  
+  mat-header-cell {
+    font-weight: bold;
+    font-size: 14;
+    border: none;
+  }
+  
+  /*  filas de datos */
+  mat-row {
+    border: none;
+    background-color: #EEEEEE; 
+    height: 42px;
+  }
+  
+  
+  /*  input de comentarios */
+  mat-form-field {
+    height: 28px !important; 
+    width: 212px; 
+    border: solid 1px #087021 !important; 
+    border-radius: 4px !important; 
+  }
+  input{
+    height: 28px;
+    font-size: 10;
+    border: none;
+  }
+  
+  /* iconos de acciones */
+  mat-icon {
+    color: #087021;
+    
+  }
+  
+  /* tabla no se desborda */
+  .content {
+    overflow-x: auto;
+    max-width: 100%;
+  }
