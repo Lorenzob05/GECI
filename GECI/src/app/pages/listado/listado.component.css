@@ -60,6 +60,7 @@ mat-table {
   
   
   /*  input de comentarios */
+  
   mat-form-field {
     height: 28px !important; 
     width: 212px; 
@@ -83,3 +84,5 @@ mat-table {
     overflow-x: auto;
     max-width: 100%;
   }
+
+  
