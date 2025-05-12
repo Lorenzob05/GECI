@@ -1,4 +1,6 @@
-
+*{
+    padding: 0;
+}
 .breadcrumb{
     margin-top: 10px;
     margin-left: 60px;
@@ -60,14 +62,13 @@ mat-table {
   
   
   /*  input de comentarios */
-  
-  mat-form-field {
+
+  input{
+    padding-left: 5px;
     height: 28px !important; 
+    border-radius: 4px !important;
     width: 212px; 
     border: solid 1px #087021 !important; 
-    border-radius: 4px !important; 
-  }
-  input{
     height: 28px;
     font-size: 10;
     border: none;
