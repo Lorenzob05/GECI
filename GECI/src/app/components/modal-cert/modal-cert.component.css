@@ -4,6 +4,7 @@
   flex-direction: column;
   padding: 16px;
   background-color: #f3f3f3; /* fondo gris claro */
+  cursor: pointer;
 }
 
 /* Cada certificado */

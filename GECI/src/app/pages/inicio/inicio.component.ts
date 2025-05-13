@@ -3,6 +3,7 @@ import { HeaderWithoutLoginComponent } from "../../components/header-without-log
 import { FooterComponent } from "../../components/footer/footer.component";
 import { MatDialog } from '@angular/material/dialog';
 import { ModalSsowebComponent } from '../../components/modal-ssoweb/modal-ssoweb.component';
+import ModalCertComponent from '../../components/modal-cert/modal-cert.component';
 
 @Component({
   selector: 'app-inicio',
@@ -23,6 +24,12 @@ export class InicioComponent {
     onSsoWeb(): void {
       console.log('Solicitudes clicked');
       let dialogRef = this.dialog.open(ModalSsowebComponent, {
+      });
+    }
+
+    onCert(): void {
+      console.log('Solicitudes clicked');
+      let dialogRef = this.dialog.open(ModalCertComponent, {
       });
     }
 

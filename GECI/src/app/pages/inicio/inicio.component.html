@@ -29,7 +29,7 @@
         Para acceder es necesario identificarse de manera segura mediante un <strong>certificado electrónico válido y reconocido o mediante inicio de sesión con acceso único (SSOweb)</strong>
       </p>
       <div class="access-methods">
-        <button mat-raised-button color="primary">CERTIFICADO ELECTRÓNICO</button>
+        <button mat-raised-button color="primary" (click)="onCert()">CERTIFICADO ELECTRÓNICO</button>
         <button mat-raised-button color="accent" (click)="onSsoWeb()">SSOWEB</button>
       </div>
     </div>

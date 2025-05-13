@@ -8,7 +8,7 @@
     <div class="certificados">
       <div>
         <img class="img-cert" src="https://placehold.co/74x74">
-        <div class="certificado">
+        <div class="certificado" (click)="onLogin()">
           <h4 style="font-weight: bold;">NOMBRE APELLIDO APELLIDO</h4>
           <p>Emisor: FNMT</p>
           <p>Valido desde: 01/10/2020 hasta 01/10/2024</p>
@@ -30,6 +30,6 @@
   </mat-dialog-content>
 
   <mat-dialog-actions>
-    <button mat-raised-button class="cerrar">CERRAR</button>
+    <button mat-raised-button class="cerrar" (click)="closeDialog()">CERRAR</button>
   </mat-dialog-actions>
 </div>
