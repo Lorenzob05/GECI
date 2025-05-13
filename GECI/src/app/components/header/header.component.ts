@@ -15,7 +15,7 @@ import { routes } from '../../app.routes';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatDividerModule,MatButtonModule, MatMenuModule, NgIf],
+  imports: [MatCardModule, MatIconModule, MatDividerModule,MatButtonModule, MatMenuModule, NgIf,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -30,7 +30,7 @@ export class HeaderComponent {
   }
 
   onSolicitudes(): void {
-    this.router.navigate(['/gestion-de-solicitudes/detalles'])
+    this.router.navigate(['/gestion-de-solicitudes'])
   }
 
 
@@ -51,5 +51,6 @@ export class HeaderComponent {
   onSalir(): void {
     console.log('Salir clicked');
     this.menuVisible = false;
+    this.router.navigate(['/'])
   }
 }

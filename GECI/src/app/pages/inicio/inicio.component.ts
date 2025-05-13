@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject ,OnDestroy } from '@angular/core';
 import { HeaderWithoutLoginComponent } from "../../components/header-without-login/header-without-login.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { MatDialog } from '@angular/material/dialog';
