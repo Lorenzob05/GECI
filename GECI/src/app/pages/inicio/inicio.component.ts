@@ -34,6 +34,6 @@ export class InicioComponent {
           this.menuVisible = false;
         }
       }
-
+     
 
 }
