@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogActions,MatDialogContent} from '@angular/material/dialog';
+import { MatDialogActions,MatDialogContent, MatDialogRef} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,11 @@ import { MatTableModule } from '@angular/material/table';
   styleUrl: './modal-solicitud.component.css'
 })
 export default class ModalSolicitudComponent {
+  constructor(
+        private dialogRef: MatDialogRef<ModalSolicitudComponent>,
+        
+      ) {}
+
   nuevaSolicitud:string = '';
   displayedColumns: string[] = ['id'];
   dataSource = [
@@ -35,5 +40,9 @@ export default class ModalSolicitudComponent {
       this.dataSource = [...this.dataSource];
       this.nuevaSolicitud = '';
     }
+  }
+
+  closeDialog():void{
+    this.dialogRef.close(); // Cierra el modal
   }
 }

@@ -1,9 +1,11 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject, HostListener } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import ModalSolicitudComponent from '../modal-solicitud/modal-solicitud.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,6 +16,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarComponent {
   @Output() filterChanged = new EventEmitter<string>();
+
+  readonly dialog = inject(MatDialog);
+
+  menuVisible = false;
+
+  toggleMenu(): void {
+    this.menuVisible = !this.menuVisible;
+  }
 
   filters = [
     { name: 'Todas', value: 'all', count: 6 },
@@ -37,4 +47,24 @@ export class SidebarComponent {
     this.activeFilter = filter;
     this.filterChanged.emit(filter);
   }
+
+  // Cerrar menu al clickar fuera
+    @HostListener('document:click', ['$event'])
+    handleClickOutside(event: MouseEvent): void {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.profile')) {
+        this.menuVisible = false;
+      }
+    }
+
+    createSolicitud(): void {
+      console.log('Solicitudes clicked');
+      let dialogRef = this.dialog.open(ModalSolicitudComponent, {
+        panelClass: 'custom-modal-wrapper',
+        minHeight: '420px',
+        maxHeight: '520px',
+      });
+    }
+
+
 }

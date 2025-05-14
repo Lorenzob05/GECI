@@ -1,4 +1,6 @@
-
+*{
+    padding: 0;
+}
 .breadcrumb{
     margin-top: 10px;
     margin-left: 60px;
@@ -60,13 +62,13 @@ mat-table {
   
   
   /*  input de comentarios */
-  mat-form-field {
-    height: 28px !important; 
+
+  input{
+    padding-left: 5px;
+    height: 28px ; 
+    border-radius: 4px !important;
     width: 212px; 
     border: solid 1px #087021 !important; 
-    border-radius: 4px !important; 
-  }
-  input{
     height: 28px;
     font-size: 10;
     border: none;
@@ -83,3 +85,36 @@ mat-table {
     overflow-x: auto;
     max-width: 100%;
   }
+
+  
+
+
+  /* barra busqueda */
+.search-bar {
+    margin-bottom: 20px;
+    width: 879px;
+    height: 35px;
+    display: flex;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #087021;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  mat-form-field {
+    flex: 1;
+  }
+
+  
+  .search-bar input{
+    height: 35px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  
+  

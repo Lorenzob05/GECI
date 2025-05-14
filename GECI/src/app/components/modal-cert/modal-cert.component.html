@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-dialog-content class="modal-body">
+    <h4>Certificado electrónico</h4>
+    <div class="divider">
+      <mat-divider></mat-divider>
+    </div>
+    <p>Seleccione un certificado</p>
+    <div class="certificados">
+      <div>
+        <img class="img-cert" src="https://placehold.co/74x74">
+        <div class="certificado" (click)="onLogin()">
+          <h4 style="font-weight: bold;">NOMBRE APELLIDO APELLIDO</h4>
+          <p>Emisor: FNMT</p>
+          <p>Valido desde: 01/10/2020 hasta 01/10/2024</p>
+          <p>Haga clic aquí para ver las propiedades del certificado</p>
+        </div>
+      </div>
+      <div>
+        <img class="img-cert" src="https://placehold.co/74x74">
+        <div class="certificado">
+          <h4 style="font-weight: bold;">NOMBRE APELLIDO APELLIDO</h4>
+          <p>Emisor: FNMT</p>
+          <p>Valido desde: 01/10/2020 hasta 01/10/2024</p>
+          <p>Haga clic aquí para ver las propiedades del certificado</p>
+        </div>
+      </div>
+
+
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button class="cerrar" (click)="closeDialog()">CERRAR</button>
+  </mat-dialog-actions>
+</div>

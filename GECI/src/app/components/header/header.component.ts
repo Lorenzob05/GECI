@@ -8,15 +8,19 @@ import { NgIf } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import ModalSolicitudComponent from '../modal-solicitud/modal-solicitud.component';
 import ModalDatosPersonalesComponent from '../modal-datos-personales/modal-datos-personales.component';
+import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatDividerModule,MatButtonModule, MatMenuModule, NgIf],
+  imports: [MatCardModule, MatIconModule, MatDividerModule,MatButtonModule, MatMenuModule, NgIf,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private router: Router){}
   readonly dialog = inject(MatDialog);
 
   menuVisible = false;
@@ -25,22 +29,8 @@ export class HeaderComponent {
     this.menuVisible = !this.menuVisible;
   }
 
-  // Cerrar menu al clickar fuera
-  @HostListener('document:click', ['$event'])
-  handleClickOutside(event: MouseEvent): void {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.profile')) {
-      this.menuVisible = false;
-    }
-  }
-
   onSolicitudes(): void {
-    console.log('Solicitudes clicked');
-    let dialogRef = this.dialog.open(ModalSolicitudComponent, {
-      panelClass: 'custom-modal-wrapper',
-      minHeight: '420px',
-      maxHeight: '520px',
-    });
+    this.router.navigate(['/gestion-de-solicitudes'])
   }
 
 
@@ -61,5 +51,6 @@ export class HeaderComponent {
   onSalir(): void {
     console.log('Salir clicked');
     this.menuVisible = false;
+    this.router.navigate(['/'])
   }
 }

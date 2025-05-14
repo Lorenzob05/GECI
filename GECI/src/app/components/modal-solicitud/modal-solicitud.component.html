@@ -35,7 +35,7 @@
   </mat-dialog-content>
 
   <mat-dialog-actions>
-    <button mat-raised-button class="cancelar">CANCELAR</button>
-    <button mat-raised-button class="volver">VOLVER</button>
+    <button mat-raised-button class="cancelar" (click)="closeDialog()">CANCELAR</button>
+    <button mat-raised-button class="volver" (click)="closeDialog()">GUARDAR</button>
   </mat-dialog-actions>
 </div>

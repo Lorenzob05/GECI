@@ -11,7 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 interface Solicitud {
   id: number;
@@ -23,7 +24,7 @@ interface Solicitud {
 @Component({
   selector: 'app-listado',
   standalone: true,
-  imports: [FormsModule,MatInputModule, MatFormFieldModule,HeaderComponent,FooterComponent,SidebarComponent,MatIconModule,MatTableModule,MatButtonModule,MatListModule],
+  imports: [MatNativeDateModule,MatDatepickerModule,FormsModule,MatInputModule, MatFormFieldModule,HeaderComponent,FooterComponent,SidebarComponent,MatIconModule,MatTableModule,MatButtonModule,MatListModule],
   templateUrl: './listado.component.html',
   styleUrl: './listado.component.css'
 })
@@ -47,7 +48,7 @@ export class ListadoComponent implements OnInit {
 
   applyFilter(filter: string) {
     this.currentFilter = filter;
-    
+
     if (filter === 'all') {
       this.dataSource.data = this.allSolicitudes;
     } else {
@@ -79,8 +80,51 @@ export class ListadoComponent implements OnInit {
     if (index !== -1) {
       this.allSolicitudes[index].comment = solicitud.comment;
     }
-    
+
     // Actualiza la tabla
     this.applyFilter(this.currentFilter);
   }
+
+
+  searchId: string = '';
+  startDate: Date | null = null;
+  endDate: Date | null = null;
+  
+  applySearch() {
+    let filteredData = this.allSolicitudes;
+
+    if (this.searchId) {
+      filteredData = filteredData.filter(solicitud => 
+        solicitud.id.toString().includes(this.searchId)
+      );
+    }
+
+    if (this.startDate) {
+      filteredData = filteredData.filter(solicitud => {
+        const dateParts = solicitud.date.split('/');
+        const solicitudDate = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0]);
+        return solicitudDate >= this.startDate!;
+      });
+    }
+
+    if (this.endDate) {
+      filteredData = filteredData.filter(solicitud => {
+        const dateParts = solicitud.date.split('/');
+        const solicitudDate = new Date(+dateParts[2], +dateParts[1] - 1, +dateParts[0]);
+        const endDatePlusOne = new Date(this.endDate!);
+        endDatePlusOne.setDate(endDatePlusOne.getDate() + 1);
+        return solicitudDate <= endDatePlusOne;
+      });
+    }
+
+    this.dataSource.data = filteredData;
+  }
+
+  refreshSearch() {
+    this.searchId = '';
+    this.startDate = null;
+    this.endDate = null;
+    this.applyFilter(this.currentFilter);
+  }
+
 }
