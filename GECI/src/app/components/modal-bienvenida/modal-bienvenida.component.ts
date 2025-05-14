@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-modal-bienvenida',
   standalone: true,
@@ -11,4 +12,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class ModalBienvenidaComponent {
 
+  constructor(private router: Router,
+    private dialogRef: MatDialogRef<ModalBienvenidaComponent>
+      ) {}
+  
+  onClose(): void {
+    console.log("clikao el cerrar")
+    this.dialogRef.close(); // Cierra el modal
+    this.router.navigate(['/gestion-de-solicitudes'])
+  }
 }

@@ -6,9 +6,9 @@
     </div>
     <p>Seleccione un certificado</p>
     <div class="certificados">
-      <div>
+      <div (click)="onLogin()">
         <img class="img-cert" src="assets/images/certificado.png">
-        <div class="certificado" (click)="onLogin()">
+        <div class="certificado" >
           <h4 style="font-weight: bold;">NOMBRE APELLIDO APELLIDO</h4>
           <p>Emisor: FNMT</p>
           <p>Valido desde: 01/10/2020 hasta 01/10/2024</p>
