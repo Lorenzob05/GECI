@@ -17,15 +17,16 @@ mat-divider {
   display: flex;
   gap: 10px;
 }
-.actions button {
+mat-dialog-actions button {
   margin-right: 24px;
-  margin-top: 20px;
   width: 120px;
   height: 40px;
   box-shadow: none;
 }
 
-.actions button.cerrar {
+
+
+mat-dialog-actions button.cerrar {
   font-weight: bold;
   font-size: 13;
   border-radius: 5px;
@@ -35,12 +36,12 @@ mat-divider {
   border: 0px;
 }
 
-.actions button.cerrar:hover {
+mat-dialog-actions button button.cerrar:hover {
   background-color: #0B4C1A;
   transition: all 0.1s ease-in-out;
 }
 
-::ng-deep .actions {
+::ng-deep mat-dialog-actions button{
   padding: 0 !important;
 }
 
