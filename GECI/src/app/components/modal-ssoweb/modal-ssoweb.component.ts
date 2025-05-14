@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { Component, inject } from '@angular/core';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
+import { ModalBienvenidaComponent } from '../modal-bienvenida/modal-bienvenida.component';
 
 @Component({
   selector: 'app-modal-ssoweb',
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class ModalSsowebComponent {
   
-  
+   readonly dialog = inject(MatDialog);
 
 
 
@@ -26,6 +27,6 @@ export class ModalSsowebComponent {
  
   onLogin(): void {
     this.dialogRef.close(); // Cierra el modal
-    this.router.navigate(['/gestion-de-solicitudes'])
+    this.dialog.open(ModalBienvenidaComponent);
   }
 }
