@@ -23,14 +23,12 @@ export class InicioComponent {
 
     onSsoWeb(): void {
       console.log('Solicitudes clicked');
-      let dialogRef = this.dialog.open(ModalSsowebComponent, {
-      });
+      this.dialog.open(ModalSsowebComponent);
     }
 
     onCert(): void {
       console.log('Solicitudes clicked');
-      let dialogRef = this.dialog.open(ModalCertComponent, {
-      });
+     this.dialog.open(ModalCertComponent);
     }
 
   // Cerrar menu al clickar fuera
