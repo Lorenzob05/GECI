@@ -6,6 +6,8 @@
    
 }
 
+
+
 .welcome-section .disclaimer {
     font-weight: lighter;
     max-width: 1300px;
@@ -67,7 +69,13 @@ button {
     border: none;
     cursor: pointer;
 }
-
-app-footer {
-  position: end;
+/*colocar footer al fondo*/
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapperContent {
+  flex: 1; 
+ 
 }

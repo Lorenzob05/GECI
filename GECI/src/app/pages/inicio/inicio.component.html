@@ -1,37 +1,39 @@
+<div class="wrapper">
 <app-header-without-login></app-header-without-login>
-<div class="welcome-section">
-    <h1>Bienvenido/a a GECI</h1>
-    <div class="disclaimer">
-      <p>
-        Para la utilización de esta aplicación informática debe tenerse en consideración la Resolución de 22 de octubre de 2020, de la Secretaría General para la Administración Pública, por la que se aprueba el Código de Conducta en el uso de las Tecnologías de la Información y la Comunicación para profesionales públicos de la Administración de la Junta de Andalucía (BOJA núm. 208 de 27 de octubre de 2020).
-      </p>
-    </div>
-  </div>
-
-  
-  <div class="content-sections">
-    <!-- Ayuda -->
-    <div class="help-section">
-      <h2>¿Necesita ayuda?</h2>
-      <div class="help-links">
-        <a href="#">Guía de uso</a>
-        <a href="#">¿Cómo utilizo mi identificación electrónica?</a>
-        <a href="#">¿Cómo solicito un medio de identificación electrónica?</a>
-        <a href="#">Compruebe si su equipo es compatible con los requisitos técnicos
-            necesarios para el uso del cliente de firma electrónica</a>
+  <div class="wrapperContent">
+    <div class="welcome-section">
+      <h1>Bienvenido/a a GECI</h1>
+      <div class="disclaimer">
+        <p>
+          Para la utilización de esta aplicación informática debe tenerse en consideración la Resolución de 22 de octubre de 2020, de la Secretaría General para la Administración Pública, por la que se aprueba el Código de Conducta en el uso de las Tecnologías de la Información y la Comunicación para profesionales públicos de la Administración de la Junta de Andalucía (BOJA núm. 208 de 27 de octubre de 2020).
+        </p>
       </div>
     </div>
+    <div class="content-sections">
+      <!-- Ayuda -->
+      <div class="help-section">
+        <h2>¿Necesita ayuda?</h2>
+        <div class="help-links">
+          <a href="#">Guía de uso</a>
+          <a href="#">¿Cómo utilizo mi identificación electrónica?</a>
+          <a href="#">¿Cómo solicito un medio de identificación electrónica?</a>
+          <a href="#">Compruebe si su equipo es compatible con los requisitos técnicos
+              necesarios para el uso del cliente de firma electrónica</a>
+        </div>
+      </div>
 
-    <!-- Acceso -->
-    <div class="access-section">
-      <h2>Acceso</h2>
-      <p>
-        Para acceder es necesario identificarse de manera segura mediante un <strong>certificado electrónico válido y reconocido o mediante inicio de sesión con acceso único (SSOweb)</strong>
-      </p>
-      <div class="access-methods">
-        <button mat-raised-button color="primary" (click)="onCert()">CERTIFICADO ELECTRÓNICO</button>
-        <button mat-raised-button color="accent" (click)="onSsoWeb()">SSOWEB</button>
+      <!-- Acceso -->
+      <div class="access-section">
+        <h2>Acceso</h2>
+        <p>
+          Para acceder es necesario identificarse de manera segura mediante un <strong>certificado electrónico válido y reconocido o mediante inicio de sesión con acceso único (SSOweb)</strong>
+        </p>
+        <div class="access-methods">
+          <button mat-raised-button color="primary" (click)="onCert()">CERTIFICADO ELECTRÓNICO</button>
+          <button mat-raised-button color="accent" (click)="onSsoWeb()">SSOWEB</button>
+        </div>
       </div>
     </div>
   </div>
 <app-footer></app-footer>
+</div>
