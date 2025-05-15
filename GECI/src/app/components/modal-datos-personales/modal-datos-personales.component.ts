@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -14,6 +14,14 @@ import { NgClass, NgIf } from '@angular/common';
   styleUrl: './modal-datos-personales.component.css'
 })
 export default class ModalDatosPersonalesComponent {
+constructor(
+    private dialogRef: MatDialogRef<ModalDatosPersonalesComponent>
+  ) {}
+ 
+  onClose(): void {
+    this.dialogRef.close(); // Cierra el modal
+  }
+
   displayedColumns: string[] = ['administrador', 'telefono', 'correo'];
   dataSource = [
     {
