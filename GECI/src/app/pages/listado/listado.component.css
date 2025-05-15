@@ -22,8 +22,8 @@ h1{
 
 .page-container {
   display: flex;
-  min-height: 80%;
-  max-height: 80%;
+  min-height: 80vh;
+  max-height: 85vh;
 }
 
 app-sidebar {
@@ -123,7 +123,7 @@ mat-table {
 .wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
 }
 .wrapperContent {
   flex: 1;
