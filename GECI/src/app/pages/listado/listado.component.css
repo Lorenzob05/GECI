@@ -22,8 +22,8 @@ h1{
 
 .page-container {
   display: flex;
-  min-height: 20vh;
-  max-height: 50vh;
+  min-height: 80vh;
+  max-height: 85vh;
 }
 
 app-sidebar {
