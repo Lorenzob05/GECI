@@ -13,30 +13,30 @@
             <!--input id-->
                 <input matInput placeholder="ID de solicitud" [(ngModel)]="searchId">
             <!-- DESDEs-->
-                <mat-datepicker-toggle matSuffix [for]="picker1" matTooltip="Abrir calendario">
+                <mat-datepicker-toggle matSuffix [for]="picker1">
                 <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
                 </mat-datepicker-toggle>
                 <input placeholder="Desde" matInput [matDatepicker]="picker1" [(ngModel)]="startDate">
-
+                
                 <mat-datepicker #picker1></mat-datepicker>
-
+              
             <!-- HAsta-->
-                <mat-datepicker-toggle matSuffix [for]="picker2" matTooltip="Abrir calendario">
+                <mat-datepicker-toggle matSuffix [for]="picker2">
                 <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
                 </mat-datepicker-toggle>
-
+              
                 <input  placeholder="Hasta"  matInput [matDatepicker]="picker2" [(ngModel)]="endDate">
                 <mat-datepicker #picker2></mat-datepicker>
 
                 <!--iconos de busqueda y recarga-->
-              <button mat-icon-button (click)="applySearch()" matTooltip="Buscar">
+              <button mat-icon-button (click)="applySearch()">
                 <mat-icon >search</mat-icon>
               </button>
-
-              <button mat-icon-button  (click)="refreshSearch()" matTooltip="Recargar">
+              
+              <button mat-icon-button  (click)="refreshSearch()">
                 <mat-icon>refresh</mat-icon>
               </button>
-
+           
           </div>
 
       <mat-table [dataSource]="dataSource" >
@@ -77,15 +77,15 @@
         <ng-container matColumnDef="actions">
           <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
           <mat-cell *matCellDef="let solicitud">
-            <a mat-icon-button href="/gestion-de-solicitudes/detalles" matTooltip="Ver detalles">
+            <a mat-icon-button href="/gestion-de-solicitudes/detalles" >
               <mat-icon>visibility</mat-icon>
             </a>
-            <a mat-icon-button matTooltip="Editar comentario">
+            <button mat-icon-button >
               <mat-icon onclick="saveComment(solicitud)">edit</mat-icon>
-            </a>
-            <a mat-icon-button matTooltip="Archivar">
+            </button>
+            <button mat-icon-button >
                 <mat-icon>archive</mat-icon>
-            </a>
+              </button>
           </mat-cell>
         </ng-container>
 
