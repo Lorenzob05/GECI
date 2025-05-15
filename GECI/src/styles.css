@@ -14,8 +14,21 @@ body { margin: 0; font-family: "Noto Sans HK", sans-serif;
   width: 880px !important;
   max-width: none !important;
 }
-  *:focus-visible{
+  button:focus-visible{
     outline: none;
   box-shadow: 0 0 0 3px blue;
   border-radius: 4px;
   }
+
+    input:focus-visible{
+    outline: none;
+  box-shadow: 0 0 0 3px blue;
+  border-radius: 4px;
+  }
+
+    a:focus-visible{
+    outline: none;
+  box-shadow: 0 0 0 3px blue;
+  border-radius: 4px;
+  }
+

@@ -22,71 +22,73 @@ h1{
 
 .page-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 20vh;
+  max-height: 50vh;
 }
- 
+
 app-sidebar {
   flex-shrink: 0; /* evita que se reduzca */
 }
- 
+
 .content {
   flex: 1;
   padding: 24px;
   overflow-x: auto;
+
 }
 
 /*  tabla */
 mat-table {
-    width: 879px; 
-    
+    width: 879px;
+
   }
-  
+
   /*  header de la tabla */
   mat-header-row {
-    background-color: #C4DDCA; 
+    background-color: #C4DDCA;
     height: 42px;
   }
-  
+
   mat-header-cell {
     font-weight: bold;
     font-size: 14;
     border: none;
   }
-  
+
   /*  filas de datos */
   mat-row {
     border: none;
-    background-color: #EEEEEE; 
+    background-color: #EEEEEE;
     height: 42px;
   }
-  
-  
+
+
   /*  input de comentarios */
 
   input{
     padding-left: 5px;
-    height: 28px ; 
+    height: 28px ;
     border-radius: 4px !important;
-    width: 212px; 
-    border: solid 1px #087021 !important; 
+    width: 212px;
+    border: solid 1px #087021 !important;
     height: 28px;
     font-size: 10;
     border: none;
   }
-  
+
   /* iconos de acciones */
   mat-icon {
     color: #087021;
-    
+
   }
-  
+
   /* tabla no se desborda */
   .content {
     overflow-x: auto;
     max-width: 100%;
   }
 
-  
+
 
 
   /* barra busqueda */
@@ -96,7 +98,7 @@ mat-table {
     height: 35px;
     display: flex;
   }
-  
+
   .search-container {
     display: flex;
     align-items: center;
@@ -105,18 +107,18 @@ mat-table {
     padding: 10px;
     background-color: white;
   }
-  
+
   mat-form-field {
     flex: 1;
   }
 
-  
+
   .search-bar input{
     height: 35px;
     margin-top: 0px;
     padding-top: 0px;
   }
-  
+
   /*colocar footer al fondo*/
 .wrapper{
     display: flex;
@@ -124,6 +126,6 @@ mat-table {
     min-height: 100vh;
 }
 .wrapperContent {
-  flex: 1; 
- 
+  flex: 1;
+
 }

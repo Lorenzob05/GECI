@@ -59,10 +59,11 @@ export class SidebarComponent {
 
     createSolicitud(): void {
       console.log('Solicitudes clicked');
-      let dialogRef = this.dialog.open(ModalSolicitudComponent, {
+      this.dialog.open(ModalSolicitudComponent, {
         panelClass: 'custom-modal-wrapper',
         minHeight: '420px',
         maxHeight: '520px',
+        autoFocus: false
       });
     }
 
