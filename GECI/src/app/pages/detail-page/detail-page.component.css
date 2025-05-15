@@ -71,6 +71,7 @@ mat-header-row {
 
 mat-icon{
   color: #087021;
+  padding: 4px;
 }
 
 mat-icon:hover{
