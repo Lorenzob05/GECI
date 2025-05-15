@@ -41,9 +41,10 @@ export class HeaderComponent {
 
   onDatosUsuario(): void {
     console.log('Datos de usuario clicked');
-    let dialogRef = this.dialog.open(ModalDatosPersonalesComponent, {
+    this.dialog.open(ModalDatosPersonalesComponent, {
       panelClass: 'custom-modal-wrapper',
       height: '520px',
+      autoFocus: false
     });
     this.menuVisible = false;
   }

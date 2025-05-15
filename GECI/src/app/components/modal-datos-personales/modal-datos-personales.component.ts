@@ -17,7 +17,7 @@ export default class ModalDatosPersonalesComponent {
 constructor(
     private dialogRef: MatDialogRef<ModalDatosPersonalesComponent>
   ) {}
- 
+
   onClose(): void {
     this.dialogRef.close(); // Cierra el modal
   }
@@ -46,11 +46,6 @@ constructor(
     },{
       administrador: 'APELLIDO APELLIDO, NOMBRE',
       telefono: '123456',
-      correo: 'nombre.apellido.apellido@correo.es',
-    },
-    {
-      administrador: 'APELLIDO APELLIDO, NOMBRE',
-      telefono: 'N/D',
       correo: 'nombre.apellido.apellido@correo.es',
     },
     {

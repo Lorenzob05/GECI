@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatTooltip } from '@angular/material/tooltip';
 
 interface Solicitud {
   id: number;
@@ -24,7 +25,7 @@ interface Solicitud {
 @Component({
   selector: 'app-listado',
   standalone: true,
-  imports: [MatNativeDateModule,MatDatepickerModule,FormsModule,MatInputModule, MatFormFieldModule,HeaderComponent,FooterComponent,SidebarComponent,MatIconModule,MatTableModule,MatButtonModule,MatListModule],
+  imports: [MatTooltip,MatNativeDateModule,MatDatepickerModule,FormsModule,MatInputModule, MatFormFieldModule,HeaderComponent,FooterComponent,SidebarComponent,MatIconModule,MatTableModule,MatButtonModule,MatListModule],
   templateUrl: './listado.component.html',
   styleUrl: './listado.component.css'
 })
