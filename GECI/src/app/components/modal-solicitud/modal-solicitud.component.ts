@@ -18,7 +18,7 @@ import { MatTableModule } from '@angular/material/table';
 export default class ModalSolicitudComponent {
   constructor(
         private dialogRef: MatDialogRef<ModalSolicitudComponent>,
-        
+
       ) {}
 
   nuevaSolicitud:string = '';
@@ -35,10 +35,12 @@ export default class ModalSolicitudComponent {
   ];
 
   addSolicitud(): void {
-    if(this.nuevaSolicitud.trim()){
-      this.dataSource.push({id: this.nuevaSolicitud});
-      this.dataSource = [...this.dataSource];
-      this.nuevaSolicitud = '';
+    if(this.dataSource.length <= 10){
+      if(this.nuevaSolicitud.trim()){
+        this.dataSource.push({id: this.nuevaSolicitud});
+        this.dataSource = [...this.dataSource];
+        this.nuevaSolicitud = '';
+      }
     }
   }
 

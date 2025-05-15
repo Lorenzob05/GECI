@@ -42,7 +42,7 @@
         <mat-header-cell *matHeaderCellDef class="actions-column"> Acciones </mat-header-cell>
         <mat-cell *matCellDef="let element" class="actions-column" [ngClass]="{ 'disabled-actions': element.error }">
           <a *ngIf="!element.error" href="" title="Copiar CSV"><mat-icon>content_copy</mat-icon></a>
-          <a *ngIf="!element.error" href="" title="Ver HSV"><mat-icon>visibility</mat-icon></a>
+          <a *ngIf="!element.error" href="" title="Ver HCV"><mat-icon>visibility</mat-icon></a>
 
           <mat-icon *ngIf="element.error" class="disabled-icon">content_copy</mat-icon>
           <mat-icon *ngIf="element.error" class="disabled-icon">visibility</mat-icon>

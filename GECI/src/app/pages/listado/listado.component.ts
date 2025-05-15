@@ -89,12 +89,12 @@ export class ListadoComponent implements OnInit {
   searchId: string = '';
   startDate: Date | null = null;
   endDate: Date | null = null;
-  
+
   applySearch() {
     let filteredData = this.allSolicitudes;
 
     if (this.searchId) {
-      filteredData = filteredData.filter(solicitud => 
+      filteredData = filteredData.filter(solicitud =>
         solicitud.id.toString().includes(this.searchId)
       );
     }
