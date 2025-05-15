@@ -51,8 +51,8 @@
 }
 
 .content-sections .access-methods button {
-    flex: 0 1 auto; /* No crece, puede encogerse, ancho automático */
-    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    flex: 0 1 auto; 
+    white-space: nowrap; /* evita que el texto se divida */
     font-weight: bold;
 }
 
@@ -66,4 +66,8 @@ button {
     border-radius: 4px; 
     border: none;
     cursor: pointer;
+}
+
+app-footer {
+  position: end;
 }

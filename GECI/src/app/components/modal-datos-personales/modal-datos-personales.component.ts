@@ -9,7 +9,7 @@ import { NgClass, NgIf } from '@angular/common';
 @Component({
   selector: 'app-modal-datos-personales',
   standalone: true,
-  imports: [MatDialogModule, MatIconModule, MatDividerModule, MatTableModule, MatProgressSpinnerModule,NgClass,NgIf],
+  imports: [MatDialogModule, MatIconModule, MatDividerModule, MatTableModule, MatProgressSpinnerModule],
   templateUrl: './modal-datos-personales.component.html',
   styleUrl: './modal-datos-personales.component.css'
 })
